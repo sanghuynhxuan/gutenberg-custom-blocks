@@ -1,0 +1,1 @@
+{"name":"gutenberg-custom-blocks","version":"1.0.0","private":true,"scripts":{"start":"wp-scripts start","build":"wp-scripts build","lint":"wp-scripts lint-js src"},"devDependencies":{"@wordpress/scripts":"^30.0.0"}}
