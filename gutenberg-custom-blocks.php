@@ -1,28 +1,8 @@
 <?php
 /**
  * Plugin Name: Gutenberg Custom Blocks
- * Description: A practical starter for bespoke Gutenberg blocks in modern WordPress projects.
- * Version: 0.1.0
- * Author: Sang Huynh Xuan
- * License: GPL-2.0-or-later
+ * Description: Build-ready custom Gutenberg block starter.
+ * Version: 1.0.0
  */
-
-declare(strict_types=1);
-
-namespace SangPortfolio;
-
-if (! defined('ABSPATH')) {
-    exit;
-}
-
-final class GutenbergCustomBlocksPlugin {
-    public function __construct() {
-        add_action('init', [$this, 'bootstrap']);
-    }
-
-    public function bootstrap(): void {
-        do_action('sang_portfolio_gutenberg_custom_blocks_ready');
-    }
-}
-
-new GutenbergCustomBlocksPlugin();
+if (! defined('ABSPATH')) { exit; }
+add_action('init', static function (): void { register_block_type(__DIR__ . '/build'); });
